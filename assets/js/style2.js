@@ -3,13 +3,11 @@ const caja = document.getElementById("caja");
 const botones = document.querySelectorAll("button");
 
 //agregar un evento de click
-botones.forEach((boton) => {
-    boton.addEventListener("click", () => {
-        // Obtener el color de fondo del botón
-        const color = boton.style.backgroundColor;
-        // Cambiar el color de fondo de la caja principal
+for (const boton of botones) {
+    boton.addEventListener("click", function() {
+        const color = this.style.backgroundColor;
         caja.style.backgroundColor = color;
     });
-});
+}
 
 
